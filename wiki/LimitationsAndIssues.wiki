@@ -1,4 +1,5 @@
 #summary Known issues and limitations of the software
+#labels Featured
 
 =Introduction=
 The software is deliberately relatively simple and I have not addressed all potential requirements. As such there are a number of known issues which I have yet addressed. If you find a bug or need a feature let me know.
