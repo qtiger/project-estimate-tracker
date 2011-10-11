@@ -23,7 +23,7 @@ These need to be downloaded and extracted. The PHP files should be placed in a d
 
 = Setting up the database =
  * From the MySQL administrator account open and run the script *database_setup.sql*. This will create all of the required tables and the basic lookup data
- * Create a user account for the 'PET' database, and grant them select, insert, update and delete privileges on the PET database
+ * Create a user account for the 'PET' database, and grant the user select, insert, update and delete privileges on the PET database
  * Modify the *environment.php* file with the username and password of the database user
 
 *Note*. If you want to install multiple instances of PET, or change the database name you will need to search and replace all instances of PET in the [http://code.google.com/p/project-estimate-tracker/source/browse/trunk/sql/database_setup.sql database_setup.sql] file, and change the database name in *environment.php* 
