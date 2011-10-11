@@ -1,4 +1,4 @@
-#summary Notes on usage
+#summary How to use PET
 
 ==Introduction==
 The Project Estimate Tracker (PET) was created to track completion estimates for tasks. It also allows time worked against tasks to be tracked.
