@@ -1,7 +1,7 @@
-﻿CREATE DATABASE `mfts` /*!40100 DEFAULT CHARACTER SET latin1 */;
+ CREATE DATABASE `pet` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-DROP TABLE IF EXISTS `mfts`.`holiday`;
-CREATE TABLE  `mfts`.`holiday` (
+DROP TABLE IF EXISTS `pet`.`holiday`;
+CREATE TABLE  `pet`.`holiday` (
   `HolidayID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `DeveloperID` int(10) unsigned NOT NULL,
   `StartDate` datetime NOT NULL,
@@ -10,8 +10,8 @@ CREATE TABLE  `mfts`.`holiday` (
   PRIMARY KEY (`HolidayID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`project`;
-CREATE TABLE  `mfts`.`project` (
+DROP TABLE IF EXISTS `pet`.`project`;
+CREATE TABLE  `pet`.`project` (
   `ProjectID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ProjectName` varchar(45) NOT NULL,
   `Live` char(1) NOT NULL,
@@ -19,15 +19,15 @@ CREATE TABLE  `mfts`.`project` (
   PRIMARY KEY (`ProjectID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`status`;
-CREATE TABLE  `mfts`.`status` (
+DROP TABLE IF EXISTS `pet`.`status`;
+CREATE TABLE  `pet`.`status` (
   `StatusID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `Status` varchar(12) NOT NULL,
   PRIMARY KEY (`StatusID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`task`;
-CREATE TABLE  `mfts`.`task` (
+DROP TABLE IF EXISTS `pet`.`task`;
+CREATE TABLE  `pet`.`task` (
   `TaskID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ProjectID` int(10) unsigned NOT NULL,
   `TaskName` varchar(45) NOT NULL,
@@ -38,8 +38,8 @@ CREATE TABLE  `mfts`.`task` (
   PRIMARY KEY (`TaskID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=331 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`taskcompletion`;
-CREATE TABLE  `mfts`.`taskcompletion` (
+DROP TABLE IF EXISTS `pet`.`taskcompletion`;
+CREATE TABLE  `pet`.`taskcompletion` (
   `CompletionID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `CompletionDate` datetime NOT NULL,
   `StatusID` int(10) unsigned NOT NULL,
@@ -51,16 +51,16 @@ CREATE TABLE  `mfts`.`taskcompletion` (
   KEY `tcdate` (`CompletionDate`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`users`;
-CREATE TABLE  `mfts`.`users` (
+DROP TABLE IF EXISTS `pet`.`users`;
+CREATE TABLE  `pet`.`users` (
   `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `UserName` varchar(3) NOT NULL,
   `Name` varchar(10) NOT NULL,
   PRIMARY KEY (`UserID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `mfts`.`time`;
-CREATE TABLE  `mfts`.`time` (
+DROP TABLE IF EXISTS `pet`.`time`;
+CREATE TABLE  `pet`.`time` (
   `timeid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `taskid` int(10) unsigned NOT NULL,
   `developerid` int(10) unsigned NOT NULL,
@@ -74,6 +74,8 @@ CREATE TABLE  `mfts`.`time` (
 
 INSERT INTO `users` (`UserID`,`UserName`,`Name`) VALUES
   (0,'zzz','General');
+
+UPDATE `users` set `UserID` = 0 where `UserID` = 1;
 
 INSERT INTO `status` (`StatusID`,`Status`) VALUES 
  (1,'Not started'),
