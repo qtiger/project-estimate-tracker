@@ -3,6 +3,8 @@
 
 = Introduction =
 
+The following steps take you through how to install PET on your server. I hope in the next few weeks to have a download package to make this process a little easier.
+
 = Requirements =
 In order to run PET you will need a server or PC with
  * Apache installed
