@@ -18,7 +18,7 @@
       <td class='pr'>
         {if $g->error eq "name_empty"}I'm drawing a blank here. Please enter a user name!
         {elseif $g->error eq "name_wrong"}I don't recognise that name. Are you sure you work here?
-        {elseif $g->error eq "not_connected"}Not connected to the database
+        {elseif $g->error eq "not_connected"}Not connected to the database.  Please check that database name and login credentials are correct in environment.php
         {/if}
       </td>
     </tr>
