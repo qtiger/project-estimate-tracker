@@ -1,5 +1,5 @@
 #summary Installation and initial Set-up
-#labels Featured
+#labels Featured,Phase-Deploy
 
 = Introduction =
 
