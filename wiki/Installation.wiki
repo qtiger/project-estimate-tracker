@@ -1,4 +1,5 @@
 #summary Installation and initial Set-up
+#labels Featured
 
 = Introduction =
 
