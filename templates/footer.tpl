@@ -2,7 +2,7 @@
 <br>
 <hr>
 <img src='logo.gif' width='120' height='36' alt='logo' class='logo'/> 
-&copy; 2008-11 <a href='http://www.quantumtiger.org/' onclick='tracklink(1)'>Tearfund</a><br>
+&copy; 2008-11 <a href='http://www.quantumtiger.org/' onclick='tracklink(1)'>Ian Coleman</a><br>
 All rights reserved
 <hr>
 <a href="matrix.php" accesskey="1">Task Matrix</a> |
