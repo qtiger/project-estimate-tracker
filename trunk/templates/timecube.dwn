@@ -1,0 +1,8 @@
+{php}
+global $g;
+header("Content-type: application/octet-stream");
+header("Content-Disposition: attachment; filename=\"PETCube.csv\"");
+{/php}
+{foreach from=$cube item=row}
+{foreach from=$row item=entry}"{$entry}",{/foreach}{php}echo "\n";{/php}
+{/foreach}
