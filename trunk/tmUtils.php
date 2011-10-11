@@ -190,7 +190,7 @@ function DBConnect()
 global $sqlSess;
 global $env;
 
-$sqlSess = mysql_connect($env['host'],$env['dbUser'],$env['pw']);
+$sqlSess = @mysql_connect($env['host'],$env['dbUser'],$env['pw']);
 
 if ($sqlSess)
   {
