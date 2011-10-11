@@ -1,0 +1,72 @@
+body {  font-family: "trebuchet ms", "arial", "sans-serif";
+        font-size: x-small;
+        background-color: #fff;
+        }
+
+#main { width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        
+#buttonBar, .prhide {display: none;}
+
+table { width: 100%;
+        padding: 0px;
+        border: 0px;
+        border-collapse: collapse;
+        font-size: xx-small;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;}
+
+table.de { width: 80%;
+        padding: 0px;
+        border: 0px;
+        border-collapse: collapse;
+        font-size: xx-small;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff; }
+
+td     { padding: 2 6 2 6;
+        border: solid 1px #006;
+        margin: 0;
+        text-align: center; }
+        
+td.ind { padding: 2 6 2 18;
+        text-align: left; }
+
+td.de { text-align: left; }
+
+
+td.pr { text-align: left;
+        font-weight: bold;
+        background-color: #ffc; }
+
+tr.odd { background-color: #eff; }
+tr.even { background-color: #fff; }
+
+td.today { font-weight: bold;
+           background-color: #dee; }
+           
+td.proj-o { background-color: #cfc; }
+td.late-o { background-color: #fcc; }
+td.proj-e { background-color: #beb; }
+td.late-e { background-color: #ebb; }
+td.change { font-weight: bold; color: #a00;}
+      
+th {    color: #fff;
+        background-color: #006;
+        text-align: left;}
+
+A:visited { color: #008; text-decoration: none; font-weight: bold; }
+A:link	  { color: #008; text-decoration: none; font-weight: bold; }
+A:active  { color: #008; text-decoration: none; font-weight: bold; }
+A:hover   { color: #04f; text-decoration: none; font-weight: bold; }
+
+A.textButton:visited  { background: #034; color: #bbc; text-decoration: none; font-weight: bold; padding: 5px;}
+A.textButton:link     { background: #034; color: #bbc; text-decoration: none; font-weight: bold; padding: 5px;}
+A.textButton:active   { background: #034; color: #bbc; text-decoration: none; font-weight: bold; padding: 5px;}
+A.textButton:hover    { background: #056; color: #fff; text-decoration: none; font-weight: bold; padding: 5px;}
+
+
