@@ -3,4 +3,43 @@
 
 = Introduction =
 
-Details of how to install and configure PET will be posted here shortly
+= Requirements =
+In order to run PET you will need a server or PC with
+ * Apache installed
+ * MySQL Installed
+ * A fixed IP address (at least locally)
+
+You will also need access to a MySQL administrator account on the server. If you are using a standalone PC to act as the PET Server, a packaged installation of Apache, MySQL and PHP (for example XAMPP) may be used.
+
+= Setting up the database =
+ * From the MySQL administrator account open and run the script *database_setup.sql*. This will create all of the required tables and the basic lookup data
+ * Create a user account for the 'PET' database, and grant them select, insert, update and delete privileges on the PET database
+ * Modify the *environment.php* file with the username and password of the database user
+
+*Note*. If you want to install multiple instances of PET, or change the database name you will need to search and replace all instances of PET in the *database_setup.sql* file, and change the database name in *environment.php* 
+
+= Setting up Smarty =
+PET uses a PHP Template Engine called [http://www.smarty.net/ Smarty]. Smarty's library files need to be installed under the web-root of your Apache server, and the $smartyPath variable in the *smarty_init.php* needs to point to the installation location of Smarty.
+
+Smarty also needs several directories inside the PET folder. By default these are
+ * taskmon_templates/templates
+ * taskmon_templates/templates_c
+ * taskmon_templates/cache
+ * taskmon_templates/configs
+
+= Installing the PET files =
+All of the files from the PET trunk folder need to be installed under the web-root of your Apache server. The normal approach would be to put these in a folder called PET.
+
+All of the templates from the trunk\templates folder need to be placed in the smarty templates folder (by default taskmon_templates/templates)
+
+Once these files are installed you are ready to start
+
+=Setting up the browser to connect to PET=
+In order for the browser to connect to PET it needs a URL. The simplest form of this is the IP address of the server followed by the directory name of PET (eg 192.0.0.10/PET). However, to make things tidier a full URL should be specified. If you are using a conventional Apache installation you can specify this in the Apache configuration files.
+
+If you are using a local installation (for example on XAMPP) you can specify this on the client machines, by altering the *hosts* file.
+
+=Logging in for the first time=
+Type in the URL you set  up in the previous stage into the URL bar of your browser. If the set-up worked successfully you should see the PET login window.
+
+For the first time you may login with the username *zzz*. This is the general user - and will allow you to set-up all of the other users needed.
