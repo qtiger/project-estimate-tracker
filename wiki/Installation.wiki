@@ -3,7 +3,7 @@
 
 = Introduction =
 
-The following steps take you through how to install PET on your server. I hope in the next few weeks to have a download package to make this process a little easier.
+The following steps take you through how to install PET on your server.
 
 = Requirements =
 In order to run PET you will need a server or PC with
@@ -12,6 +12,14 @@ In order to run PET you will need a server or PC with
  * A fixed IP address (at least locally)
 
 You will also need access to a MySQL administrator account on the server. If you are using a standalone PC to act as the PET Server, a packaged installation of Apache, MySQL and PHP (for example XAMPP) may be used.
+
+==Getting hold of PET==
+There are three zipfiles in the downloads area
+ * PET_PHP_Vx_x_x.zip
+ * PET_TEMPLATES_Vx_x_x.zip
+ * PET_Smarty.zip
+
+These need to be downloaded and extracted. The PHP files should be placed in a directory under the web-root of the Apache server (eg /var/html/pet or htdocs/pet in XAMPP). The templates need to be in a directory below this called /taskmon_templates/templates (eg /var/html/pet/taskmon_templates/templates). If you don't already have Smarty on your server, these files also need to be downloaded. See  the section below on Smarty for more details.
 
 = Setting up the database =
  * From the MySQL administrator account open and run the script *database_setup.sql*. This will create all of the required tables and the basic lookup data
@@ -29,12 +37,9 @@ Smarty also needs several directories inside the PET folder. By default these ar
  * taskmon_templates/cache
  * taskmon_templates/configs
 
-= Installing the PET files =
-All of the files from the PET trunk folder need to be installed under the web-root of your Apache server. The normal approach would be to put these in a folder called PET.
+As mentioned earlier the templates zip file needs to be expanded in the templates directory
 
-All of the templates from the trunk\templates folder need to be placed in the smarty templates folder (by default taskmon_templates/templates)
-
-Once these files are installed you are ready to start
+Once all the files are installed you are ready to start
 
 =Setting up the browser to connect to PET=
 In order for the browser to connect to PET it needs a URL. The simplest form of this is the IP address of the server followed by the directory name of PET (eg 192.0.0.10/PET). However, to make things tidier a full URL should be specified. If you are using a conventional Apache installation you can specify this in the Apache configuration files.
