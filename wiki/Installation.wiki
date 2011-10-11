@@ -1,4 +1,4 @@
-#PET Installation Notes.
+#summary Installation and initial Set-up
 
 = Introduction =
 
