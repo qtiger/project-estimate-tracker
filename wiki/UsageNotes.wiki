@@ -7,6 +7,7 @@ The Project Estimate Tracker (PET) was created to track completion estimates for
 The button bar along the top allows you to navigate between the main screens. Within each screen there are additional buttons and/or hyperlinks which allow further more detailed navigation.
 
 =Task Matrix=
+
 The main view with lists of projects, tasks and estimates.
 
 All blue text items are hyperlinks which allow you to influence the display or edit the item.
