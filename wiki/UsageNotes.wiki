@@ -1,10 +1,11 @@
 #summary How to use PET
 
-==Introduction==
+=Introduction=
 The Project Estimate Tracker (PET) was created to track completion estimates for tasks. It also allows time worked against tasks to be tracked.
 
 The button bar along the top allows you to navigate between the main screens. Within each screen there are additional buttons and/or hyperlinks which allow further more detailed navigation.
-==Task Matrix==
+
+=Task Matrix=
 The main view with lists of projects, tasks and estimates.
 
 All blue text items are hyperlinks which allow you to influence the display or edit the item.
@@ -18,12 +19,12 @@ All blue text items are hyperlinks which allow you to influence the display or e
 ||View all users||Removes the user filter from Task Matrix||
 ||View all projects||Removes the project filter from the Task Matrix||
 
-==New Project==
+=New Project=
 Allows you to create new projects or modify an existing project (by clicking on the project name in the list).
 
 The New Project screen displays a list of all projects, which is a convenient way of getting to projects. Next to each project name is a timesheet link which opens the full timesheet for that project. It is possible to export this to excel.
 
-==New Task==
+=New Task=
 Allows you to create new tasks against existing projects. Choose the project, staff member and status from the drop down menus. Enter the dates either as text or use the date buttons to pop up a date picker control.
 
 If the task needs to be tracked in the task matrix choose *Yes* in the Tracked Task option. Otherwise choose *No*. Tracked tasks have a start and an end date. Users may only record time against tracked tasks until they are marked as being completed.
@@ -31,10 +32,11 @@ If the task needs to be tracked in the task matrix choose *Yes* in the Tracked T
 Untracked tasks have no start or end date, and users may record time against them (unless they are marked as archived).
 
 Tasks should be tracked if they have discrete end dates (eg build wall, paint wall). Tasks should be untracked if they are catch alls or ongoing (eg Team Meetings, General Maintenance). Untracked tasks may be assigned to the user “General” in which case all users will see them and may record time against them.
-==Out of Office==
+
+=Out of Office=
 Allows you to set holidays etc for users. Choose the user from the drop down and enter dates as for new tasks. Out of office weeks show as *Out* on the task matrix for that user (subject to the settings below)
 
-==Settings==
+=Settings=
 Settings contains a few basic settings which change the way the things display.
 
 || *Option* || *Action* ||
@@ -45,13 +47,13 @@ Settings contains a few basic settings which change the way the things display.
 
 Settings also has a hyperlink which allows the timesheet data to be exported to MS Excel for use in a pivot table.
 
-==Users==
+=Users=
 Allows you to add new users and modify existing users. To modify an existing user click on their username in the user list. There is a team field on the user screen. This has no effect in the system, but can be used to filter timesheet reports in pivot tables.
 
-==Updates==
+=Updates=
 Shows any changes you've made to estimates in the last month
 
-==Timesheet==
+=Timesheet=
 Allows user to record time against tasks. The screen shows a list of all the tasks against which a user may record time. Items highlighted in white are tracked tasks. Items highlighted in green are the users own untracked tasks. Items highlighted in yellow are general untracked tasks.
 
 There are several ways of recording time against a task.
@@ -65,9 +67,11 @@ The Timesheet Reports hyperlink may be used to see an individual user’s timesh
 When entering minutes it is possible to enter the number as hours and minutes by using a decimal point or a colon to separate the hours and minutes, and PET will calculate the correct number of minutes. For example entering *1.15* will add 75 minutes to the task. Note that entering *1:5* adds one hour and five minutes as does *1:05*. To add an hour and a half type *1.30*.
 
 The grey number at the bottom right hand side of the timesheet shows the number of hours elapsed since the user’s start time today. It can be considered to be the target to aim for. It is affected by the start time in the settings tab. Occasionally it may not appear, in which case hit F5 to refresh the window.
-==Logout==
+
+=Logout=
 Logs out.
-==Printing from PET==
+
+=Printing from PET=
 By Default Internet explorer does not print the background colours for the matrix view. To change this do the following:
 
  # Click Tools
