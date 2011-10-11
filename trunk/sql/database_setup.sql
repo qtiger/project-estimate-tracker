@@ -72,12 +72,12 @@ CREATE TABLE  `pet`.`time` (
   PRIMARY KEY (`timeid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=874 DEFAULT CHARSET=latin1;
 
-INSERT INTO `users` (`UserID`,`UserName`,`Name`) VALUES
+INSERT INTO `pet`.`users` (`UserID`,`UserName`,`Name`) VALUES
   (0,'zzz','General');
 
-UPDATE `users` set `UserID` = 0 where `UserID` = 1;
+UPDATE `pet`.`users` set `UserID` = 0 where `UserID` = 1;
 
-INSERT INTO `status` (`StatusID`,`Status`) VALUES 
+INSERT INTO `pet`.`status` (`StatusID`,`Status`) VALUES 
  (1,'Not started'),
  (2,'In Progress'),
  (3,'On Hold'),
