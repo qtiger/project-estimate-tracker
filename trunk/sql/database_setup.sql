@@ -56,6 +56,7 @@ CREATE TABLE  `pet`.`users` (
   `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `UserName` varchar(3) NOT NULL,
   `Name` varchar(10) NOT NULL,
+  `Team` varchar(20) NULL,
   PRIMARY KEY (`UserID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
