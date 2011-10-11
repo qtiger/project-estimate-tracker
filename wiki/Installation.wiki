@@ -39,7 +39,15 @@ Once these files are installed you are ready to start
 =Setting up the browser to connect to PET=
 In order for the browser to connect to PET it needs a URL. The simplest form of this is the IP address of the server followed by the directory name of PET (eg 192.0.0.10/PET). However, to make things tidier a full URL should be specified. If you are using a conventional Apache installation you can specify this in the Apache configuration files.
 
-If you are using a local installation (for example on XAMPP) you can specify this on the client machines, by altering the *hosts* file.
+If you are using a local installation (for example on XAMPP) you can specify this on the client machines, by altering the *hosts* file. On a windows machine this is stored under
+
+c:\windows\system32\drivers\etc\hosts
+
+Add in a line with your servers IP address and point it to a url. eg
+
+192.0.0.10  PET
+
+from the browser you can then got to http:\\pet\
 
 =Logging in for the first time=
 Type in the URL you set  up in the previous stage into the URL bar of your browser. If the set-up worked successfully you should see the PET login window.
