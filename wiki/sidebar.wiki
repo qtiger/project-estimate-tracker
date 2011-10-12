@@ -2,4 +2,4 @@
 
  * [UsageNotes Using PET]
  * [Installation Installing PET]
- * [LimitsAndIssues Known Issues]
+ * [LimitationsAndIssues Known Issues]
