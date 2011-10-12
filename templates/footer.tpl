@@ -1,9 +1,9 @@
 <div class='prhide'>
 <br>
 <hr>
-<img src='logo.gif' width='120' height='36' alt='logo' class='logo'/> 
-&copy; 2008-11 <a href='http://www.quantumtiger.org/' onclick='tracklink(1)'>Ian Coleman</a><br>
-All rights reserved
+<img src='sfaxPet.png' width='120' height='55' alt='logo' class='logo'/> 
+&copy; 2008-11 <a href='http://www.shadowfax.org.uk' onclick='tracklink(1)'>Ian Coleman</a><br>
+All rights reserved<br/><br/>
 <hr>
 <a href="matrix.php" accesskey="1">Task Matrix</a> |
 <a href="proj.php" accesskey="2">New Project</a> |
