@@ -101,6 +101,7 @@ AJAXCall("SetTime.php?action=add&user=" + devID + "&task=" + taskID + "&date=" +
 function DeleteTime(devID,timeID)
 {
 date = document.getElementById("date").value;
+changeArray.length=0;
 
 ReturnDiv = "timesheet";
 
