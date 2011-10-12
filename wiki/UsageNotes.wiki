@@ -8,7 +8,7 @@ The button bar along the top allows you to navigate between the main screens. Wi
 
 =Task Matrix=
 
-The main view with lists of projects, tasks and estimates.
+The main view with lists of projects, tasks and estimates. See [http://shadowfax.org.uk/wiki/Task_Matrix PET Task Matrix Screenshots] for more details
 
 All blue text items are hyperlinks which allow you to influence the display or edit the item.
 
