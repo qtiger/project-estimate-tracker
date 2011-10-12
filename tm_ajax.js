@@ -319,6 +319,7 @@ function getTimeFields(devid)
     minList += strToMin(document.getElementById("Minutes-" + changeArray[i]).value) + "|";
   }
 
+changeArray.length = 0;
 ReturnDiv = "timesheet";
 AJAXCall("multitime.php?user=" + devid + "&date=" + date + "&ids=" + idList + "&subs=" + subList + "&mins=" + minList);
 }
