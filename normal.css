@@ -1,6 +1,6 @@
 body {  font-family: "trebuchet ms", "arial", "sans-serif";
         font-size: small;
-        background-color: #def;
+        background-color: #bef;
         text-align: center;}
 
 #main { width: 98%;
@@ -183,7 +183,7 @@ A.textButton:hover    { background: #048; color: #fff; }
 	background: #def;
 	font-weight: bold;	}
 
-.logo { float: right; }
+.logo { float: right; clear: both;}
 
 .btn { padding: 2px; font-size: .9em; margin: 0px; }
 
