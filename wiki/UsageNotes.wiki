@@ -22,12 +22,14 @@ All blue text items are hyperlinks which allow you to influence the display or e
 ||View all projects||Removes the project filter from the Task Matrix||
 
 =New Project=
-Allows you to create new projects or modify an existing project (by clicking on the project name in the list).
+Allows you to create new projects or modify an existing project (by clicking on the project name in the list). See also[http://shadowfax.org.uk/wiki/Project PET New Project Screenshot].
 
 The New Project screen displays a list of all projects, which is a convenient way of getting to projects. Next to each project name is a timesheet link which opens the full timesheet for that project. It is possible to export this to excel.
 
 =New Task=
-Allows you to create new tasks against existing projects. Choose the project, staff member and status from the drop down menus. Enter the dates either as text or use the date buttons to pop up a date picker control.
+Allows you to create new tasks against existing projects. See also [http://shadowfax.org.uk/wiki/Task PET New Task Screenshot].
+
+Choose the project, staff member and status from the drop down menus. Enter the dates either as text or use the date buttons to pop up a date picker control.
 
 If the task needs to be tracked in the task matrix choose *Yes* in the Tracked Task option. Otherwise choose *No*. Tracked tasks have a start and an end date. Users may only record time against tracked tasks until they are marked as being completed.
 
@@ -56,7 +58,9 @@ Allows you to add new users and modify existing users. To modify an existing use
 Shows any changes you've made to estimates in the last month
 
 =Timesheet=
-Allows user to record time against tasks. The screen shows a list of all the tasks against which a user may record time. Items highlighted in white are tracked tasks. Items highlighted in green are the users own untracked tasks. Items highlighted in yellow are general untracked tasks.
+Allows user to record time against tasks. See also [http://shadowfax.org.uk/wiki/Times_sheet PET Time-sheet screenshot]
+
+The screen shows a list of all the tasks against which a user may record time. Items highlighted in white are tracked tasks. Items highlighted in green are the users own untracked tasks. Items highlighted in yellow are general untracked tasks.
 
 There are several ways of recording time against a task.
  * Enter the number of minutes and click *Add* next to the appropriate task
