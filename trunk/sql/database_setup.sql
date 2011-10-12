@@ -36,7 +36,7 @@ CREATE TABLE  `pet`.`task` (
   `Tracked` char(1) NOT NULL DEFAULT 'Y',
   `Minutes` int(10) unsigned NOT NULL,
   PRIMARY KEY (`TaskID`)
-) ENGINE=MyISAM AUTO_INCREMENT=331 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `pet`.`taskcompletion`;
 CREATE TABLE  `pet`.`taskcompletion` (
@@ -71,7 +71,7 @@ CREATE TABLE  `pet`.`time` (
   `starttime` datetime NOT NULL,
   `description` varchar(80) NOT NULL DEFAULT '',
   PRIMARY KEY (`timeid`)
-) ENGINE=MyISAM AUTO_INCREMENT=874 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 INSERT INTO `pet`.`users` (`UserID`,`UserName`,`Name`) VALUES
   (0,'zzz','General');
