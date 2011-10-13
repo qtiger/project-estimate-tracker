@@ -1,6 +1,17 @@
 <?php
-// put full path to Smarty.class.php
-$smartyPath = "../../Smarty/Smarty.class.php";
+///////////////////////////////////////////////////////////////////////////////////////////
+// Smarty Path must contain the path name to find Smarty.class.php. By default this is
+// "PET_Smarty/Smarty.class.php", however, Smarty can be installed anywhere - or even
+// shared between applications, so modify this line as required
+//
+// Note that in addition to the templates directory smarty needs three directories
+// each of which needs to be writable by the web-server. The default locations for these
+// are: 
+// - templates/templates_c
+// - templates/cache
+// - templates/configs
+///////////////////////////////////////////////////////////////////////////////////////////
+$smartyPath = "PET_Smarty/Smarty.class.php";
 $templatesOK = false;
 if (file_exists($smartyPath))
   {
@@ -9,10 +20,10 @@ if (file_exists($smartyPath))
 
   $tmpl = new Smarty();
 
-  $tmpl->template_dir = 'taskmon_templates/templates';
-  $tmpl->compile_dir = 'taskmon_templates/templates_c';
-  $tmpl->cache_dir = 'taskmon_templates/cache';
-  $tmpl->config_dir = 'taskmon_templates/configs';
+  $tmpl->template_dir = '/templates';
+  $tmpl->compile_dir = 'templates/templates_c';
+  $tmpl->cache_dir = 'templates/cache';
+  $tmpl->config_dir = 'templates/configs';
 
   // Session specifics
   session_start();
