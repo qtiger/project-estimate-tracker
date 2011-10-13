@@ -20,7 +20,7 @@ if (file_exists($smartyPath))
 
   $tmpl = new Smarty();
 
-  $tmpl->template_dir = '/templates';
+  $tmpl->template_dir = 'templates';
   $tmpl->compile_dir = 'templates/templates_c';
   $tmpl->cache_dir = 'templates/cache';
   $tmpl->config_dir = 'templates/configs';
