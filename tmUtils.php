@@ -1,6 +1,8 @@
 <?php
 //////////////////////////////////////////////////////////////////////////////////////////////
-// ***IMPORTANT*** Make sure that database is changed if copying code from development to live
+// tmUtils.php contains a large number of utility functions which are the core of PET (formally
+// Task Monitor - hence the 'tm') including the main database read & write functions and
+// ProjectWalker which is the main driver behind the task matrix
 //////////////////////////////////////////////////////////////////////////////////////////////
 require_once "environment.php";
 
