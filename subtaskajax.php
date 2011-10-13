@@ -74,6 +74,6 @@ if ($sqlSess)
   }
   $tmpl->assign('items',count($descList));
   $tmpl->assign('error',$error);
-  $tmpl->display('subtask.tpl');
+  $tmpl->display('subtaskajax.tpl');
 }
 ?>
