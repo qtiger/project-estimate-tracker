@@ -85,6 +85,8 @@ return minutes;
 
 function AddTime(devID,taskID,isZero,subid)
 {
+// Save changes before add
+getTimeFields(devID);
 if (isZero) minutes=0;
 else minutes = strToMin(document.getElementById("minutes").value);
 date = document.getElementById("date").value;
