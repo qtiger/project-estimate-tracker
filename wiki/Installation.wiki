@@ -13,6 +13,8 @@ In order to run PET you will need a server or PC with
 
 You will also need access to a MySQL administrator account on the server. If you are using a standalone PC to act as the PET Server, a packaged installation of Apache, MySQL and PHP (for example XAMPP) may be used.
 
+*IMPORTANT* In the current version, PET has no user security. If you intend to use it, it is strongly recommended that you install it on a LAN and do not expose it to the public internet
+
 ==Getting hold of PET==
 There are two zipfiles in the downloads area
  * PET_Vx_x_x_rNNN.zip
