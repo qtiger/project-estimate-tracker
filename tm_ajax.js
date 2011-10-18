@@ -130,7 +130,7 @@ date = document.getElementById("date").value;
 
 ReturnDiv = "timesheet";
 
-AJAXCall("SetTime.php?action=get&user=" + devID+ "&date=" + date);
+AJAXCall("SetTime.php?action=get&user=" + devID+ "&date=" + date + getTimeFields());
 }
 
 function AJAXCallback()
