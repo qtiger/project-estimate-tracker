@@ -36,8 +36,7 @@
 <th></th>
 <th></th>
 </tr>
-<tr><td colspan='9' class='btm'><button class='btn' onclick="updateAll({$g->devID})">&nbsp;&nbsp;Update All&nbsp;&nbsp;</button>
-  <button class='btn' onclick="listSubTasks()">&nbsp;&nbsp;List Subtasks&nbsp;&nbsp;</button></td></tr>
+<tr><td colspan='9' class='btm'><button class='btn' onclick="updateAll({$g->devID})">&nbsp;&nbsp;Update All&nbsp;&nbsp;</button></td></tr>
 </table>
 {else}
 <p>No Timesheet for day</p>
