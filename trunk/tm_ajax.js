@@ -85,32 +85,32 @@ return minutes;
 
 function AddTime(devID,taskID,isZero,subid)
 {
-// Save changes before add
-getTimeFields(devID);
 if (isZero) minutes=0;
 else minutes = strToMin(document.getElementById("minutes").value);
 date = document.getElementById("date").value;
 
 if (!subid) sub = "";
+else if (!isNaN(subid)) sub = subid
 else sub = document.getElementById(subid).value;
 
 ReturnDiv = "timesheet";
 
 AJAXCall("SetTime.php?action=add&user=" + devID + "&task=" + taskID + "&date=" + date 
-  + "&minutes=" + minutes + "&sub="+ sub);
+  + "&minutes=" + minutes + "&sub="+ sub + getTimeFields());
+changeArray.length=0;
 }
 
 function DeleteTime(devID,timeID)
 {
 date = document.getElementById("date").value;
-changeArray.length=0;
 
 ReturnDiv = "timesheet";
 
-AJAXCall("SetTime.php?action=delete&timeid=" + timeID + "&user=" + devID+ "&date=" + date);
+AJAXCall("SetTime.php?action=delete&timeid=" + timeID + "&user=" + devID+ "&date=" + date + getTimeFields());
+changeArray.length=0;
 }
 
-function UpdateTime(devID,timeID,minid,subid)
+function Now(devID,timeID,minid,subid)
 {
 date = document.getElementById("date").value;
 minutes = strToMin(document.getElementById(minid).value);
@@ -119,8 +119,9 @@ if (!subid) sub = "";
 else sub = document.getElementById(subid).value;
 
 ReturnDiv = "timesheet";
-AJAXCall ("SetTime.php?action=update&timeid=" + timeID + "&user=" + devID+ "&date=" + date 
-  + "&minutes=" + minutes + "&sub="+ sub);
+AJAXCall ("SetTime.php?action=now&timeid=" + timeID + "&user=" + devID+ "&date=" + date 
+  + "&minutes=" + minutes + "&sub="+ sub + getTimeFields());
+changeArray.length=0;
 }
 
 function GetTime(devID)
@@ -293,13 +294,16 @@ function getHours(hour,min)
   var dayStart = new Date(today.getFullYear(),today.getMonth(),today.getDate(),hour,min,0,0);
 
   var diff = Math.floor((today.getTime() - dayStart.getTime())/60000);
+  if (diff < 0) document.getElementById('wkHrs').innerHTML = 'Early';
+  else
+    {
+    var hours = Math.floor(diff/60);
+    var mins = diff % 60;
 
-  var hours = Math.floor(diff/60);
-  var mins = diff % 60;
+    if (mins<10) mins = '0' + mins;
 
-  if (mins<10) mins = '0' + mins;
-
-  document.getElementById('wkHrs').innerHTML = hours + ":" + mins;
+    document.getElementById('wkHrs').innerHTML = hours + ":" + mins;
+    }
 }
 
 function tracklink(id)
@@ -308,9 +312,8 @@ function tracklink(id)
 }
 
 
-function getTimeFields(devid)
+function getTimeFields()
 {
-  date = document.getElementById("date").value;
   items = changeArray.length;
   idList = "";
   subList = "";
@@ -322,9 +325,15 @@ function getTimeFields(devid)
     minList += strToMin(document.getElementById("Minutes-" + changeArray[i]).value) + "|";
   }
 
-changeArray.length = 0;
+  return "&ids=" + idList + "&subs=" + subList + "&mins=" + minList;
+}
+
+function updateAll(devId)
+{
+date = document.getElementById("date").value;
 ReturnDiv = "timesheet";
-AJAXCall("multitime.php?user=" + devid + "&date=" + date + "&ids=" + idList + "&subs=" + subList + "&mins=" + minList);
+AJAXCall("SetTime.php?action=none&user=" + devId + "&date=" + date + getTimeFields());
+changeArray.length = 0;
 }
 
 function timeChange(id)

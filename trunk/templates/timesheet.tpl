@@ -13,8 +13,11 @@
 {include file="Header.tpl"}
 {include file="ButtonBar.tpl"}
 
+<h2>Timesheet ({$g->name} - {$g->date})</h2>
+<p>View <a href='tsrep.php'>Timesheet Reports</a></p>
+<div id ="timesheet">
 {include file="timesheetsub.tpl"}
-
+</div>
 <hr/>
 
 <h2>Add Time (<span id="devID">{$g->devID}</span>)</h2>
