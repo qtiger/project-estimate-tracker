@@ -14,9 +14,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
   parse_str($_SERVER['QUERY_STRING'],$query);
   
   $allOk="";
-  if (!array_key_exists("action", $query)) $allOk .= "action not set.";
+  if (!array_key_exists("action", $query)) $allOk .= "action not set. ";
   if (!array_key_exists("user", $query)) $allOk .= "user not set. ";
   if (!array_key_exists("date", $query)) $allOk .= "date not set. ";
+  if (!array_key_exists("ids", $query)) $allOk .= "IDs not set. ";
+  if (!array_key_exists("subs", $query)) $allOk .= "Subs not set. ";
+  if (!array_key_exists("mins", $query)) $allOk .= "Mins not set.";
 
   if ($allOk=="")
     {
@@ -24,7 +27,21 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
     
     $g->devID = $query['user'];
     $g->date = $query['date'];
+    
+    $ids = explode("|",$query['ids']);
+    $mins = explode ("|",$query['mins']);
+    $subs = explode ("|",$query['subs']);
 
+    // Apply all outstanding changes before action
+    $i=0;
+    foreach ($ids as $id)
+    {
+      if ($id!="")
+        $res = mysql_query("update time set minutes = '" . $mins[$i] . "', description = '" . $subs[$i] . "' where timeid = '$id'", $sqlSess);
+      $i++;
+    }
+    
+    // Add new Time Line
     if ($query['action'] == 'add')
       {
       if (!array_key_exists("task", $query)) $allOk .= "task not set. ";
@@ -42,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
         $res = mysql_query($sql, $sqlSess);
         }
       }
+    // Delete Time Line
     else if ($query['action'] == 'delete')
       {
       if (!array_key_exists("timeid", $query)) $allOk .= "timeif not set. ";
@@ -51,7 +69,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
         $res = mysql_query("delete from time where timeid = " . $query['timeid'], $sqlSess);
         }
       }
-    else if ($query['action'] == 'update')
+    // Update current time line to now
+    else if ($query['action'] == 'now')
       {
       if (!array_key_exists("timeid", $query)) $allOk .= "timeif not set. ";
       if (!array_key_exists("minutes", $query)) $allOk .= "minutes not set. ";
@@ -76,8 +95,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
             $res = mysql_query("update time set minutes = $mins, description = '$sub' where timeid = " . $query['timeid'], $sqlSess);
             }
           }
-        else
-          $res = mysql_query("update time set minutes = " . $query['minutes'] . ", description = '$sub' where timeid = " . $query['timeid'], $sqlSess);
         }
       }
     if ($allOk=="")
@@ -91,5 +108,5 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
     }
   else echo "Incorrect Params(3): " . $allOk;
   }
-else echo "Incorrect Method. Expecting Post.";
+else echo "Incorrect Method. Expecting Post!";
 ?>
