@@ -231,7 +231,7 @@ function refreshDatePicker(dateFieldName, year, month, day)
  
   // start generating the code for the calendar table
   var html = TABLE;
-  var curWeek = thisDay.getWeek(0) - 1;
+  var wkDay = new Date (thisDay.getTime());
  
   // this is the title bar, which displays the month and the buttons to
   // go back to a previous month or forward to the next month
@@ -251,7 +251,7 @@ function refreshDatePicker(dateFieldName, year, month, day)
   // now we'll start populating the table with days of the month
   html += TR;
 
-  html += TD_weeks + curWeek++ + xTD;
+  html += TD_weeks + wkDay.getWeek() + xTD;
  
   // first, the leading blanks
   for (i = 0; i < thisDay.getDay(); i++)
@@ -282,7 +282,8 @@ function refreshDatePicker(dateFieldName, year, month, day)
     if (thisDay.getDay() == 0 && thisDay.getDate() > 1)
       {
       html += xTR + TR;
-      html += TD_weeks + curWeek++ + xTD;
+      wkDay.setDate(wkDay.getDate() + 7);
+      html += TD_weeks + wkDay.getWeek() + xTD;
       }
   } while (thisDay.getDate() > 1)
  
@@ -522,39 +523,39 @@ function adjustiFrame(pickerDiv, iFrameDiv)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// Added this function
+// I'm grateful to Taco van den Broek for this function which mimics PHP's IS0 
+// 8601 week numbers.
+// 
+// This function is subject to the MIT license: you are free to use it in any way
+// you like as long as it keeps its license.
+// 
+// http://techblog.procurios.nl/k/news/view/33796/14863/Calculate-ISO-8601-week-and-year-in-javascript.html 
 /////////////////////////////////////////////////////////////////////////////////
-/**
-* Returns the week number for this date. dowOffset is the day of week the week
-* "starts" on for your locale - it can be from 0 to 6. If dowOffset is 1 (Monday),
-* the week returned is the ISO 8601 week number.
-* @param int dowOffset
-* @return int
-*/
-Date.prototype.getWeek = function (dowOffset) {
-/*getWeek() was developed by Nick Baicoianu at MeanFreePath: http://www.meanfreepath.com */
-
-dowOffset = typeof(dowOffset) == 'int' ? dowOffset : 0; //default dowOffset to zero
-var newYear = new Date(this.getFullYear(),0,1);
-var day = newYear.getDay() - dowOffset; //the day of week the year begins on
-day = (day >= 0 ? day : day + 7);
-var daynum = Math.floor((this.getTime() - newYear.getTime() -
-(this.getTimezoneOffset()-newYear.getTimezoneOffset())*60000)/86400000) + 1;
-var weeknum;
-//if the year starts mid week
-if(day < 6) {
-weeknum = Math.floor((daynum+day-1)/7) + 1;
-if(weeknum > 52) {
-nYear = new Date(this.getFullYear() + 1,0,1);
-nday = nYear.getDay() - dowOffset;
-nday = nday >= 0 ? nday : nday + 7;
-/*if the next year starts before the middle of
-the week, it is week #1 of that year*/
-weeknum = nday < 6 ? 1 : 53;
-}
-}
-else {
-weeknum = Math.floor((daynum+day-1)/7);
-}
-return weeknum;
-};
+Date.prototype.getWeek = function () {  
+    // Create a copy of this date object  
+    var target  = new Date(this.valueOf());  
+  
+    // ISO week date weeks start on monday  
+    // so correct the day number  
+    var dayNr   = (this.getDay() + 6) % 7;  
+  
+    // ISO 8601 states that week 1 is the week  
+    // with the first thursday of that year.  
+    // Set the target date to the thursday in the target week  
+    target.setDate(target.getDate() - dayNr + 3);  
+  
+    // Store the millisecond value of the target date  
+    var firstThursday = target.valueOf();  
+  
+    // Set the target to the first thursday of the year  
+    // First set the target to january first  
+    target.setMonth(0, 1);  
+    // Not a thursday? Correct the date to the next thursday  
+    if (target.getDay() != 4) {  
+        target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);  
+    }  
+  
+    // The weeknumber is the number of weeks between the   
+    // first thursday of the year and the thursday in the target week  
+    return 1 + Math.ceil((firstThursday - target) / 604800000); // 604800000 = 7 * 24 * 3600 * 1000  
+} 
