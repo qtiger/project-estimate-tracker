@@ -1,4 +1,4 @@
-#summary What is in the pipeline
+#summary What is in the pipeline?
 
 = Database Hardening =
 
