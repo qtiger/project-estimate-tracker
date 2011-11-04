@@ -1,8 +1,6 @@
-{php}
-global $g;
-header("Content-type: application/octet-stream");
-header("Content-Disposition: attachment; filename=\"PETCube.csv\"");
-{/php}
+{csvHeader filename="PETCube.csv"}
 {foreach from=$cube item=row}
-{foreach from=$row item=entry}"{$entry}",{/foreach}{php}echo "\n";{/php}
+{foreach from=$row item=entry}"{$entry}",{/foreach}
+{* needs an empty line below to force newline otherwise csv file doesn't load properly *}
+
 {/foreach}

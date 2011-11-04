@@ -1,13 +1,11 @@
-{php}
-global $g;
-header("Content-type: application/octet-stream");
-header("Content-Disposition: attachment; filename=\"$g->projName-timesheet.csv\"");
-{/php}
+{csvHeader filename=$g->filename}
 {$g->projID} - {$g->projName} - Time ({$g->startMon} - {$g->endMon})
 {if ($g->items > 0)}
 Task,Subtask{foreach from=$g->monArr item=mon},{$mon}{/foreach},Total
 {foreach from=$g->timeList item=subtask}
-{foreach from=$subtask key=k item=stCell}{$stCell},{/foreach}{php}echo "\n";{/php}
+{foreach from=$subtask key=k item=stCell}{$stCell},{/foreach}
+{* needs an empty line below to force newline otherwise csv file doesn't load properly *}
+
 {/foreach}
 Total (hours),,{foreach from=$g->monArr key=mon item=mName}{$g->totalsArr[$mon]},{/foreach}{$g->totalsArr.total}
 Total (person days),,{foreach from=$g->monArr key=mon item=mName}{$g->manDaysArr[$mon]},{/foreach}{$g->manDaysArr.total}

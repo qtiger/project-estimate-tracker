@@ -35,6 +35,7 @@ and tm.developerid = u.userid";
     }
   }
 
+  $tmpl->register_function('csvHeader','csvHeader');
   $tmpl->assign('cube',$cube);
   $tmpl->display('timecube.dwn');
 }

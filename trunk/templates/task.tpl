@@ -75,11 +75,15 @@
   </table>
 </form>
 <br/>
-{php}MakeCalendar();{/php}
+{$g->calendar}
 
-{if $g->taskid ge 1 and $g->post.Tracked eq 'Y'}
+{if $g->taskid ge 1}
+{if $g->post.Tracked eq 'Y'}
 <h2>Completion Estimate History for Task</h2>
-{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'" "}
+{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'" table_attr="class='de'"}
+{/if}
+<h2>Time logged against task</h2>
+{html_table loop=$g->timeDetails cols=$g->timeCols tr_attr = $g->trAttr td_attr="class='de'" table_attr="class='de'"}
 {/if}
 
 {include file="footer.tpl"}

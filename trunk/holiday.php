@@ -156,7 +156,8 @@ $g->holCols = "Developer, Start Date, EndDate";
 $g->holDetails = MakeTable("name, date_format(startdate,\"%d-%m-%Y\"), date_format(enddate,\"%d-%m-%Y\")", 
  "holiday, users", "holiday.developerid = users.userid and enddate > '$today' and developerid = $g->dev", "startdate desc");
 //  }
-  
+$g->calendar = MakeCalendar();
+
 $tmpl->assign('g',$g);
 $tmpl->display('holiday.tpl');
 ?>
