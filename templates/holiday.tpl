@@ -49,8 +49,8 @@
     </tr>
   </table>
 </form>
-
-{php}MakeCalendar();{/php}
+<br/>
+{$g->calendar}
 
 <hr>
 <h2><span id="FullName"></span>Out of Office Dates</h2>

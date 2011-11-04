@@ -157,8 +157,12 @@ if ($g->taskid>=1)
    date_format(completiondate,\"%d-%m-%Y\"), status", 
   "taskcompletion, status", "taskcompletion.statusid = status.statusid and taskid =" . $g->taskid,
   "createddate desc");
+  $g->timeCols = "Year,Month,Time";
+  $g->timeDetails = MakeTable("year(date), monthname(date), concat (sum(minutes) div 60, ':', lpad(sum(minutes) mod 60,2,0)) hhmm",
+          "time", "taskid=". $g->taskid,"year(date),month(date)", "year(date), month(date)");
   }
 
+$g->calendar = MakeCalendar();
 $tmpl->register_function("minsToHours","minsToHours");
 $tmpl->assign('g',$g);
 $tmpl->display('task.tpl');

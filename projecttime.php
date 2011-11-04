@@ -39,6 +39,7 @@ if (isset($g->projID))
     {
     $projRow=mysql_fetch_array($projRes);
     if ($projRow) $g->projName = $projRow['ProjectName'];
+    $g->filename = $g->projName . "-timesheet.csv";
     }
   }
 
@@ -127,7 +128,10 @@ if (isset($g->projID))
   }
 }
 else $g->statusMessage = "No project specified";
+
 $tmpl->assign('g',$g);
+$tmpl->register_function('csvHeader','csvHeader');
+
 if ($download) $tmpl->display('projecttime.dwn');
 else $tmpl->display('projecttime.tpl');
 ?>

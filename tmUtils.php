@@ -1,8 +1,6 @@
 <?php
 //////////////////////////////////////////////////////////////////////////////////////////////
-// tmUtils.php contains a large number of utility functions which are the core of PET (formally
-// Task Monitor - hence the 'tm') including the main database read & write functions and
-// ProjectWalker which is the main driver behind the task matrix
+// ***IMPORTANT*** Make sure that database is changed if copying code from development to live
 //////////////////////////////////////////////////////////////////////////////////////////////
 require_once "environment.php";
 
@@ -192,7 +190,7 @@ function DBConnect()
 global $sqlSess;
 global $env;
 
-$sqlSess = @mysql_connect($env['host'],$env['dbUser'],$env['pw']);
+$sqlSess = mysql_connect($env['host'],$env['dbUser'],$env['pw']);
 
 if ($sqlSess)
   {
@@ -496,7 +494,7 @@ if ($sqlSess)
 return $dropdown;
 }
 
-function MakeTable($cols,$tables,$where,$order)
+function MakeTable($cols,$tables,$where,$order=null,$group=null)
 {
 global $sqlSess;
 
@@ -504,6 +502,7 @@ if ($sqlSess)
   {
   $sql = "select " . $cols. " from " . $tables;
   if ($where) { $sql = $sql . " where " . $where; }
+  if ($group) { $sql = $sql . " group by " . $order; }
   if ($order) { $sql = $sql . " order by " . $order; }
 
   debug ($sql);
@@ -835,6 +834,8 @@ return $status;
 
 function MakeCalendar()
 {
+$retStr="";
+
 $startMon = date('n'); // Month - no leading zero
 $loopMon = $startMon;
 $curMon = 0;
@@ -858,7 +859,7 @@ $startDay = date('w', $loopDate); // day 0 = Sun
 $loopDay = 0;
 $week = "";
 
-echo "<table><tr valign='top'>";
+$retStr .= "<table><tr valign='top'>";
 
 while ($loopDate < $endLoop)
   {
@@ -870,25 +871,25 @@ while ($loopDate < $endLoop)
       {
       while ($loopDay < 7)
         {
-        echo "<td></td>\n";
+        $retStr .= "<td></td>\n";
         $loopDay++;
         }
       $loopDay = 0;
-      echo "</tr></table></td>";
+      $retStr .= "</tr></table></td>";
       }
     
     $curMon = $loopMon;
 
-    echo "<td><table><tr><th colspan=7>" . date('F',$loopDate) . " " . date('Y',$loopDate) ."</th></tr>\n";
+    $retStr .= "<td><table><tr><th colspan=7>" . date('F',$loopDate) . " " . date('Y',$loopDate) ."</th></tr>\n";
 
-    echo "<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>\n";
+    $retStr .= "<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>\n";
     if ($curDay != $loopDay)
       {
-      echo "<tr>";
+      $retStr .= "<tr>";
 
       while ($curDay != $loopDay)
         {
-        echo "<td></td>";
+        $retStr .= "<td></td>";
         $loopDay++;
         
         if ($loopDay > 6) $loopDay = 0;
@@ -898,18 +899,18 @@ while ($loopDate < $endLoop)
   
   if ($loopDay == 7)
     {
-    echo "</tr>\n";
+    $retStr .= "</tr>\n";
     }
     
   if ($loopDay < 7)
     {
-    if ($loopDate == $today) echo "<td class='today'>" . date("d",$loopDate) . "</td>";
-    else echo "<td>" . date("d",$loopDate) . "</td>";
+    if ($loopDate == $today) $retStr .= "<td class='today'>" . date("d",$loopDate) . "</td>";
+    else $retStr .= "<td>" . date("d",$loopDate) . "</td>";
     }
   else
     {
-    if ($loopDate == $today) echo "<tr><td class='pr'>" . date("d",$loopDate) . "</td>";
-    else echo "<tr><td>" . date("d",$loopDate) . "</td>";
+    if ($loopDate == $today) $retStr .= "<tr><td class='pr'>" . date("d",$loopDate) . "</td>";
+    else $retStr .= "<tr><td>" . date("d",$loopDate) . "</td>";
     $loopDay = 0;
     }
   
@@ -919,11 +920,13 @@ while ($loopDate < $endLoop)
   }
 while ($loopDay < 7)
   {
-  echo "<td></td>\n";
+  $retStr .= "<td></td>\n";
   $loopDay++;
   }
-echo "</tr></table></td>";
-echo "</tr></table>\n";
+$retStr .= "</tr></table></td>";
+$retStr .= "</tr></table>\n";
+
+return $retStr;
 }
 
 function buildList($sql)
@@ -1048,4 +1051,22 @@ where tm.taskid = tk.taskid
 return $ret;
 }
 
+function getQuery($qs)
+{
+  parse_str($qs,$qa);
+  
+  foreach ($qa as $item)
+    $item = mysql_real_escape_string (str_replace(array("\"","'"), "", $item));
+  
+  return $qa;
+}
+
+function csvHeader($params, &$smarty)
+{
+  if (empty($params['filename'])) $filename = "pet.csv";
+  else $filename = $params['filename'];
+  
+  header("Content-type: application/octet-stream");
+  header("Content-Disposition: attachment; filename=\"$filename\"");
+}
 ?>
