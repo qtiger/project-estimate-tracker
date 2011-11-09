@@ -1,14 +1,14 @@
 #summary What is in the pipeline?
 
-= Database Hardening =
+= v0.2.0 Database Hardening =
 
 Work has is now under-way to revisit every user entry form and review the way that user input is handled in order to improve the database & server security. As part of this it is hoped to rationalise the way that SQL calls are made and reduce the amount of duplicated code dealing with results sets.
 
 Additionally as part of this step error messages which were returned by the scripts are being moved to a central messages file to make automated testing and localisation easier.
 
-= User Security =
+= v0.3.0 User Security =
 
-Once the data hardening has been done, it is intended to add proper user security to force a user-name & password to be required in order to view/update PET. At this stage I may also review whether to have role levels (eg normal user who can only edit their own items and supervisor who can edit all). Ideally it would also be good to link with any existing login systems (eg OpenID, LDAP etc), but this is much less likely.
+Once the data hardening has been done, it is intended to add proper user security to force a user-name & password to be required in order to view/update PET. At this stage I may also review whether to have role levels (eg normal user who can only edit their own items and supervisor who can edit all). Ideally it would also be good to link with any existing login systems (eg OpenID, LDAP etc), but this is much less likely to happen, unless specific requests are made for it.
 
 = Template Review =
 
