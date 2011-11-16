@@ -1,0 +1,11 @@
+{csvHeader filename="PETcube.xls"}
+{include file="xmlheader.txt"}
+  <data xmlns="urn:schemas-microsoft-com:rowset">
+  {foreach from=$cube item=row}
+   <row Col1="{$row.Project}" Col2="{$row.Task}" col3 ="{$row.Subtask}"
+    Col4="{$row.User}" Col5="{$row.Team}" Col6="{$row.Date}" Col7="{$row.Minutes}" Col8="{$row.Hours}"
+    Col9="{$row.Days}" xmlns="#RowsetSchema"/>
+   {/foreach}
+   </data>
+ </PivotCache>
+</Workbook>

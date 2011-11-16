@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Tearfund</LastAuthor>
+  <Created>2011-11-15T13:01:05Z</Created>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12270</WindowHeight>
+  <WindowWidth>21915</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>60</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s22">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s23">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s24">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s25">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s46">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s47">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s48">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s49">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="Background"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="16" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="64.5"/>
+   <Column ss:Width="52.5" ss:Span="6"/>
+   <Column ss:Index="9" ss:Width="55.5" ss:Span="1"/>
+   <Column ss:Index="11" ss:AutoFitWidth="0" ss:Width="42" ss:Span="3"/>
+   <Column ss:Index="15" ss:AutoFitWidth="0" ss:Width="55.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="42.75" ss:Span="7"/>
+   <Column ss:Index="24" ss:Width="55.5"/>
+   <Row ss:Index="3">
+    <Cell ss:StyleID="s21"/>
+    <Cell ss:StyleID="s21"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s23"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"/>
+    <Cell ss:StyleID="s21"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s23"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s47"/>
+    <Cell ss:StyleID="s47"/>
+    <Cell ss:StyleID="s48"/>
+    <Cell ss:StyleID="s48"/>
+    <Cell ss:StyleID="s48"/>
+    <Cell ss:StyleID="s48"/>
+    <Cell ss:StyleID="s49"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <PivotTable xmlns="urn:schemas-microsoft-com:office:excel">
+   <Name>PivotTable1</Name>
+   <ImmediateItemsOnDrop/>
+   <ShowPageMultipleItemLabel/>
+   <Location>R3C1:R16C7</Location>
+   <VersionLastUpdate>2</VersionLastUpdate>
+   <DefaultVersion>1</DefaultVersion>
+   <PivotField>
+    <Name>Project</Name>
+   </PivotField>
+   <PivotField>
+    <Name>Task</Name>
+   </PivotField>
+   <PivotField>
+    <Name>SubTask</Name>
+   </PivotField>
+   <PivotField>
+    <Name>User</Name>
+   </PivotField>
+   <PivotField>
+    <Name>Team</Name>
+   </PivotField>
+   <PivotField>
+    <Name>Date</Name>
+    <NumberFormat>General Date</NumberFormat>
+    <DataType>Date</DataType>
+    <ParentField>Years</ParentField>
+    <GroupType>Months</GroupType>
+    <GroupStart>2010-03-19T00:00:00</GroupStart>
+    <GroupStartAuto/>
+    <GroupEnd>2011-11-16T00:00:00</GroupEnd>
+    <GroupEndAuto/>
+    <PivotItem>
+     <Name>&lt;19/03/2010</Name>
+     <CachePosition>1</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Jan</Name>
+     <CachePosition>2</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Feb</Name>
+     <CachePosition>3</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Mar</Name>
+     <CachePosition>4</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Apr</Name>
+     <CachePosition>5</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>May</Name>
+     <CachePosition>6</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Jun</Name>
+     <CachePosition>7</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Jul</Name>
+     <CachePosition>8</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Aug</Name>
+     <CachePosition>9</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Sep</Name>
+     <CachePosition>10</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Oct</Name>
+     <CachePosition>11</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Nov</Name>
+     <CachePosition>12</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>Dec</Name>
+     <CachePosition>13</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>&gt;16/11/2011</Name>
+     <CachePosition>14</CachePosition>
+    </PivotItem>
+   </PivotField>
+   <PivotField>
+    <Name>Minutes</Name>
+    <DataType>Integer</DataType>
+   </PivotField>
+   <PivotField>
+    <Name>Hours</Name>
+    <DataType>Number</DataType>
+   </PivotField>
+   <PivotField>
+    <Name>Days</Name>
+    <DataType>Number</DataType>
+   </PivotField>
+   <PivotField>
+    <Name>Years</Name>
+    <Subtotal>None</Subtotal>
+    <BaseField>Date</BaseField>
+    <GroupType>Years</GroupType>
+    <PivotItem>
+     <Name>&lt;19/03/2010</Name>
+     <CachePosition>1</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>2010</Name>
+     <CachePosition>2</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>2011</Name>
+     <CachePosition>3</CachePosition>
+    </PivotItem>
+    <PivotItem>
+     <Name>&gt;16/11/2011</Name>
+     <CachePosition>4</CachePosition>
+    </PivotItem>
+   </PivotField>
+   <PivotField>
+    <DataField/>
+    <Name>Data</Name>
+    <Orientation>Row</Orientation>
+    <Position>-1</Position>
+   </PivotField>
+   <PTSource>
+    <CacheIndex>1</CacheIndex>
+    <VersionLastRefresh>2</VersionLastRefresh>
+    <RefreshName>Tearfund</RefreshName>
+    <RefreshDate>2011-11-15T12:56:14</RefreshDate>
+    <RefreshDateCopy>2011-11-15T12:56:14</RefreshDateCopy>
+    <ConsolidationReference>
+     <FileName>[PETCube.xml]PETCube</FileName>
+     <Reference>R2C1:R8357C9</Reference>
+    </ConsolidationReference>
+   </PTSource>
+  </PivotTable>
+ </Worksheet>
+ <PivotCache xmlns="urn:schemas-microsoft-com:office:excel">
+  <CacheIndex>1</CacheIndex>
+  <Schema s:id="RowsetSchema" xmlns="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882">
+   <ElementType s:name="row" s:content="eltOnly">
+    <attribute s:type="Col1"/>
+    <attribute s:type="Col2"/>
+    <attribute s:type="Col3"/>
+    <attribute s:type="Col4"/>
+    <attribute s:type="Col5"/>
+    <attribute s:type="Col6"/>
+    <attribute s:type="Col7"/>
+    <attribute s:type="Col8"/>
+    <attribute s:type="Col9"/>
+    <extends s:type="rs:rowbase"/>
+   </ElementType>
+   <AttributeType s:name="Col1" rs:name="Project">
+    <datatype dt:maxLength="255"/>
+   </AttributeType>
+   <AttributeType s:name="Col2" rs:name="Task">
+    <datatype dt:maxLength="255"/>
+   </AttributeType>
+   <AttributeType s:name="Col3" rs:name="SubTask">
+    <datatype dt:maxLength="255"/>
+   </AttributeType>
+   <AttributeType s:name="Col4" rs:name="User">
+    <datatype dt:maxLength="255"/>
+   </AttributeType>
+   <AttributeType s:name="Col5" rs:name="Team">
+    <datatype dt:maxLength="255"/>
+   </AttributeType>
+   <AttributeType s:name="Col6" rs:name="Date">
+    <datatype dt:type="dateTime"/>
+   </AttributeType>
+   <AttributeType s:name="Col7" rs:name="Minutes">
+    <datatype dt:type="int"/>
+   </AttributeType>
+   <AttributeType s:name="Col8" rs:name="Hours">
+    <datatype dt:type="float"/>
+   </AttributeType>
+   <AttributeType s:name="Col9" rs:name="Days">
+    <datatype dt:type="float"/>
+   </AttributeType>
+  </Schema>

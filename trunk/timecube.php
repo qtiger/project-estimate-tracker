@@ -3,6 +3,11 @@ require('init_smarty.php');
 require ('tmUtils.php');
 DBConnect();
 
+$fmt = "xml";
+parse_str($_SERVER['QUERY_STRING'],$query);
+if (array_key_exists("f",$query))
+  if ($query['f']=='csv') $fmt = 'csv';
+
 if ($sqlSess)
 {
   $sql = "select p.projectname Project,
@@ -13,7 +18,7 @@ u.team Team,
 tm.date Date,
 tm.minutes Minutes,
 tm.minutes/60 Hours,
-tm.minutes/1440 Days
+tm.minutes/420 Days
 from project p, task tk, time tm, users u
 where p.projectid = tk.projectid
 and tm.taskid = tk.taskid
@@ -29,7 +34,7 @@ and tm.developerid = u.userid";
   
   if ($res)
   {
-    while ($row=mysql_fetch_row($res))
+    while ($row=mysql_fetch_assoc($res))
     {
       $cube[] = $row;
     }
@@ -37,6 +42,7 @@ and tm.developerid = u.userid";
 
   $tmpl->register_function('csvHeader','csvHeader');
   $tmpl->assign('cube',$cube);
-  $tmpl->display('timecube.dwn');
+  if ($fmt == "csv") $tmpl->display('timecube.dwn');
+  else  $tmpl->display('xmlcube.dwn');
 }
 ?>

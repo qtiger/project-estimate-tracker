@@ -10,10 +10,9 @@
 <div id='main'>
 {include file="Header.tpl"}
 {include file="ButtonBar.tpl"}
+<button onClick="window.location='timecube.php'">Excel Timesheet</button> 
+<button onClick="window.location='timecube.php?f=csv'">CSV Timesheet</button><hr/> 
 <h2>Settings</h2>
-
-<p><a href="timecube.php">Full Timesheet in Excel</a></p>
-
 <form action="settings.php?action=submit" method="post">
   <table class='de'>
     <tr>
