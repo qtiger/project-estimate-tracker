@@ -12,6 +12,8 @@
 <div id='main'>
 {include file="Header.tpl"}
 {include file="ButtonBar.tpl"}
+<button onClick="window.location='timecube.php'">Excel Timesheet</button> 
+<button onClick="window.location='timecube.php?f=csv'">CSV Timesheet</button><hr/> 
 <h2>TimeSheet Report</h2>
 
 <select name="DevID" id="DevID" onchange="TimesheetReport();">{html_options options=$g->devList selected=$g->devID}</select>
