@@ -10,28 +10,30 @@ if (array_key_exists("f",$query))
 
 if ($sqlSess)
 {
-  $sql = "select p.projectname Project,
-tk.taskname Task,
-tm.description SubTask,
-u.name User,
-u.team Team,
-tm.date Date,
-tm.minutes Minutes,
-tm.minutes/60 Hours,
-tm.minutes/420 Days
+  if ($fmt=="xml")
+    $sql = "select p.projectname Project, tk.taskname Task, tm.description SubTask,
+u.name User, u.team Team, date_format(tm.date,'%Y-%m-%dT%H:%i:%s') Date,
+tm.minutes Minutes, tm.minutes/60 Hours, tm.minutes/420 Days
 from project p, task tk, time tm, users u
-where p.projectid = tk.projectid
-and tm.taskid = tk.taskid
-and tm.developerid = u.userid";
-
+where p.projectid = tk.projectid and tm.taskid = tk.taskid and tm.developerid = u.userid";
+  else
+    $sql = "select p.projectname Project, tk.taskname Task, tm.description SubTask,
+u.name User, u.team Team, tm.date Date,
+tm.minutes Minutes, tm.minutes/60 Hours, tm.minutes/420 Days
+from project p, task tk, time tm, users u
+where p.projectid = tk.projectid and tm.taskid = tk.taskid and tm.developerid = u.userid";
+  
   $res = mysql_query($sql,$sqlSess);
 
+  if ($fmt == "csv")
+  {
   $numFields = mysql_num_fields($res);
   for ($i=0; $i<$numFields; $i++)
     $fNames[] = mysql_field_name($res,$i);
 
-  $cube[] = $fNames;
-  
+    $cube[] = $fNames;
+   }
+   
   if ($res)
   {
     while ($row=mysql_fetch_assoc($res))
