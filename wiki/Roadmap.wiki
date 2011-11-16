@@ -4,12 +4,12 @@
 
 Work has is now well under-way to revisit every user entry form and review the way that user input is handled in order to improve the database & server security. This includes
 
-* Rationalisation of the way SQL calls are handled
-* Remove reliance on cookies for storing login data
-* Tighter validation of form and query string data
-* Robust treatment of special characters in put data (both to ensure correct display and to increase security)
-* Creation of central messages file to improve ease of localisation
-* Optimisation of certain inefficient code routines
+ * Rationalisation of the way SQL calls are handled
+ * Remove reliance on cookies for storing login data
+ * Tighter validation of form and query string data
+ * Robust treatment of special characters in put data (both to ensure correct display and to increase security)
+ * Creation of central messages file to improve ease of localisation
+ * Optimisation of certain inefficient code routines
 
 = v0.3.0 User Security =
 
