@@ -10,14 +10,14 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <button onClick="window.location='timecube.php'">Excel Timesheet</button> 
 <button onClick="window.location='timecube.php?f=csv'">CSV Timesheet</button><hr/> 
 <h2>TimeSheet Report</h2>
 
 <select name="DevID" id="DevID" onchange="TimesheetReport();">{html_options options=$g->devList selected=$g->devID}</select>
-<select name="MonthID" id="MonthID" onchange="TimesheetReport();">{html_options options=$g->monList selected=`$g->mon-1`}</select>
+<select name="MonthID" id="MonthID" onchange="TimesheetReport();">{html_options options=$g->monList selected=$g->mon-1}</select>
 <select name="YearID" id="YearID" onchange="TimesheetReport();">{html_options options=$g->yearList selected=$g->year}</select>
 <br/><br/>
 

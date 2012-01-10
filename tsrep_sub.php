@@ -17,5 +17,5 @@ $g->ts = $ts;
 
 $g->totals = TotalsArray($g->monthStart, $g->monthEnd, $g->devID);
 
-$tmpl->register_function("minsToHours","minsToHours");
+$tmpl->registerPlugin("function","minsToHours","minsToHours");
 ?>

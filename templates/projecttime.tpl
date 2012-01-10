@@ -11,8 +11,8 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <h2>{$g->projID} - {$g->projName} - Time ({$g->startMon} - {$g->endMon})</h2>
 {if ($g->items > 0)}
 <p><a href="projecttime.php?dl=y&proj={$g->projID}">Open Timesheet in Excel</a></p>

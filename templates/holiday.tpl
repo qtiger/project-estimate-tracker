@@ -10,8 +10,8 @@
 
 <body onload="RequestHoliday();">
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <h2>Out of Office</h2>
 
 <form action="Holiday.php?action=submit" method="post">
