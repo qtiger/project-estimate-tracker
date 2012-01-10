@@ -130,7 +130,7 @@ if (isset($g->projID))
 else $g->statusMessage = "No project specified";
 
 $tmpl->assign('g',$g);
-$tmpl->register_function('csvHeader','csvHeader');
+$tmpl->registerPlugin('function','csvHeader','csvHeader');
 
 if ($download) $tmpl->display('projecttime.dwn');
 else $tmpl->display('projecttime.tpl');

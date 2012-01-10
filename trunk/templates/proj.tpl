@@ -46,10 +46,10 @@
 {if $g->taskRows ge 1}
 <h2>Current Status of Tasks in Project</h2>
 <p><a href='projecttime.php?proj={$g->proj}'>View Project Timesheet</a></p>
-{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'""}
+{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'"}
 {/if}
 
-{ if $g->showlist }
+{if $g->showlist}
 <h2>Current Projects</h2>
 <table class='de'>
 <tr><th>Project ID</th><th>Project Name</th><th>Status</th></tr>

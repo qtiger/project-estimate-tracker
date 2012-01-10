@@ -10,8 +10,8 @@
 
 <body onload="hrTimer({$g->startHour},{$g->startMin})">
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 
 <h2>Timesheet ({$g->name} - {$g->date})</h2>
 <p>View <a href='tsrep.php'>Timesheet Reports</a></p>

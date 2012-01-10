@@ -163,7 +163,7 @@ if ($g->taskid>=1)
   }
 
 $g->calendar = MakeCalendar();
-$tmpl->register_function("minsToHours","minsToHours");
+$tmpl->registerPlugin("function","minsToHours","minsToHours");
 $tmpl->assign('g',$g);
 $tmpl->display('task.tpl');
 ?>

@@ -9,8 +9,8 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <h2>{$g->name} ({$g->userDetails})</h2>
 
 <form action="newuser.php?action=submit" method="post">
@@ -49,13 +49,13 @@
 <table class='de'>
 <tr><th>ID</th><th>User Name</th><th>Name</th><th>Team</th></tr>
 {section name=ul loop=$g->userList}
-{ if $rcnt mod 4 == 0}{ if $rcnt != 0}</tr>{/if}<tr>{/if}
-{ if ($rcnt-1) mod 4 == 0}
+{if $rcnt mod 4 == 0}{if $rcnt != 0}</tr>{/if}<tr>{/if}
+{if ($rcnt-1) mod 4 == 0}
   <td class='ind'><a href='newuser.php?user={$g->userList[ul]}'>{$g->userList[ul]}</a></td>
 {else}
   <td class='ind'>{$g->userList[ul]}</td>
 {/if}
-{ assign var=rcnt value=`$rcnt+1` }
+{assign var=rcnt value=$rcnt+1}
 {/section}
 </tr></table>
 

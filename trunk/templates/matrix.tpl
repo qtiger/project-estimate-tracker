@@ -10,7 +10,7 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
+{include file="header.tpl"}
 {include file="buttonbar.tpl"}
 <h2>Task Matrix - {$smarty.now|date_format:"%d/%m/%Y"}</h2>
 
@@ -33,7 +33,7 @@
 {else}
   <tr class='odd'>
 {/if}
-{assign var=rcnt value=`$rcnt+1`}
+{assign var=rcnt value=$rcnt+1}
 {section name=inner loop=$g->projTable[outer]}
     <td {$g->projTableAttr[outer][inner]}>{$g->projTable[outer][inner]}</td>
 {/section}

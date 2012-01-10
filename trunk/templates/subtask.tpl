@@ -8,8 +8,8 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <h2>{$g->name} ({$g->user})</h2>
 
 { if $g->showlist }

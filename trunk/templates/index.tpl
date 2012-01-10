@@ -8,7 +8,7 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
+{include file="header.tpl"}
 <h2>User List</h2>
 
 <p>Welcome {$g->name}</p>

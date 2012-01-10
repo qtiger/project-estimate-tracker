@@ -9,12 +9,12 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <h2>Task Updates</h2>
 {if ($g->updates=='yes')}
 <p>List of all task changes which have comments from the last month (excluding completed tasks).</p>
-{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'" "}
+{html_table loop=$g->compDetails cols=$g->compCols tr_attr = $g->trAttr td_attr="class='de'"}
 {else}<p><b>No Updates in the last month</b></p>
 {/if}{include file="footer.tpl"}
 </div>

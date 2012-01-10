@@ -8,7 +8,7 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
+{include file="header.tpl"}
 <h2>{$g->name}</h2>
 
 <form action="login.php?action=submit" method="post">

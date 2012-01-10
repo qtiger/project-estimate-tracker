@@ -11,5 +11,5 @@ $g->name = $_COOKIE['userfullname'];
 if ($g->timeList[0]) $g->showList = true;
 else $g->showList = false;
 
-$tmpl->register_function("minsToHours","minsToHours");
+$tmpl->registerPlugin("function","minsToHours","minsToHours");
 ?>

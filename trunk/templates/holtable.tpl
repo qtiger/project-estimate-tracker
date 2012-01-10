@@ -1,1 +1,1 @@
-{html_table loop=$g->holDetails cols=$g->holCols td_attr="class='de'" "}
+{html_table loop=$g->holDetails cols=$g->holCols td_attr="class='de'"}

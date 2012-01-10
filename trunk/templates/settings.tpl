@@ -8,8 +8,8 @@
 
 <body>
 <div id='main'>
-{include file="Header.tpl"}
-{include file="ButtonBar.tpl"}
+{include file="header.tpl"}
+{include file="buttonbar.tpl"}
 <button onClick="window.location='timecube.php'">Excel Timesheet</button> 
 <button onClick="window.location='timecube.php?f=csv'">CSV Timesheet</button><hr/> 
 <h2>Settings</h2>
