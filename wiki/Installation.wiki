@@ -7,9 +7,9 @@ The following steps take you through how to install PET on your server.
 
 = Requirements =
 In order to run PET you will need a server or PC with
- * Apache installed
+ * Apache
  * PHP 5.2 or later
- * MySQL Installed
+ * MySQL
  * A fixed IP address (at least locally)
  * Smarty v3.1.7
 
