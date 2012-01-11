@@ -10,19 +10,19 @@ In order to run PET you will need a server or PC with
  * Apache installed
  * MySQL Installed
  * A fixed IP address (at least locally)
+ * Smarty v3.1.7
 
 You will also need access to a MySQL administrator account on the server. If you are using a standalone PC to act as the PET Server, a packaged installation of Apache, MySQL and PHP (for example XAMPP) may be used.
 
 *IMPORTANT* In the current version, PET has no user security. If you intend to use it, it is strongly recommended that you install it on a LAN and do not expose it to the public internet
 
 ==Getting hold of PET==
-There are two zipfiles in the downloads area
+The downloads area contains the current recommended version of PET in a zip file.
  * PET_Vx_x_x_rNNN.zip
- * PET_Smarty.zip
 
-The first of these files contains the PET sourcecode, templates and database setup script. The second archive contains the Smarty template engine (not part of PET, but needed to run). If your server already has Smarty installed you do not need this download.
+This file contains the PET sourcecode, templates and database setup script. 
 
-PET files should be placed in a directory under the web-root of the Apache server (eg /var/html/pet or htdocs/pet in XAMPP). The templates need to be in a directory below this called /templates (eg /var/html/pet/templates). If you don't already have Smarty on your server, these files also need to be downloaded. See  the section below on Smarty for more details.
+PET files should be placed in a directory under the web-root of the Apache server (eg /var/html/pet or htdocs/pet in XAMPP). The templates need to be in a directory below this called /templates (eg /var/html/pet/templates).
 
 = Setting up the database =
  * From the MySQL administrator account open and run the script *database_setup.sql*. This will create all of the required tables and the basic lookup data
@@ -32,7 +32,9 @@ PET files should be placed in a directory under the web-root of the Apache serve
 *Note*. If you want to install multiple instances of PET, or change the database name you will need to search and replace all instances of PET in the [http://code.google.com/p/project-estimate-tracker/source/browse/trunk/sql/database_setup.sql database_setup.sql] file, and change the database name in *environment.php* 
 
 = Setting up Smarty =
-PET uses a PHP Template Engine called [http://www.smarty.net/ Smarty]. Smarty's library files need to be installed under the web-root of your Apache server, and the $smartyPath variable in the *smarty_init.php* needs to point to the installation location of Smarty.
+PET uses a PHP Template Engine called [http://www.smarty.net/ Smarty].  This can be downloaded from [http://www.smarty.net/download]. The latest version of PET has been built to use Smarty v3.1.7
+
+Smarty's library files need to be installed under the web-root of your Apache server, and the $smartyPath variable in the *smarty_init.php* needs to point to the installation location of Smarty.
 
 Smarty also needs several directories inside the PET folder. By default these are
  * templates
