@@ -7,8 +7,7 @@ Work has is now well under-way to revisit every user entry form and review the w
  * Rationalisation of the way SQL calls are handled
  * Remove reliance on cookies for storing login data
  * Tighter validation of form and query string data
- * Robust treatment of special characters in put data (both to ensure correct display and to increase security)
- * Creation of central messages file to improve ease of localisation
+ * Robust treatment of special characters in input data (both to ensure correct display and to increase security)
  * Optimisation of certain inefficient code routines
 
 Additionally there are a couple of minor enhancements that will be rolled into the v0.2.0 release:
